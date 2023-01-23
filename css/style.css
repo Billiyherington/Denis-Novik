@@ -10,9 +10,8 @@ img{
 .nav {
   display: flex;
   justify-content: space-between;
-  border-bottom: 1px solid #d9d9d9;
-  padding-top: 11px;
-  padding-bottom: 8px;
+  
+  
 }
 .nav-link {
   font-weight: 400;
@@ -74,8 +73,44 @@ img{
 .lang{
     transform: rotate(-90deg);
 }
-
+/* burger */
+.navbar{
+  border-bottom: 1px solid #d9d9d9;
+  display: flex;
+  align-items: center;
+  justify-content: end;
+  padding-top: 11px;
+  padding-bottom: 8px;
+}
+.burger{
+  display: none;
+  width: 40px;
+  height: 5px;
+  background: #000000;
+}
 .container{
     width: 80%;
     margin: 0 auto;
+}
+@media (max-width: 1200px){
+  .description{
+    padding-bottom: 24px;
+  }
+}
+@media (max-width: 990px){
+  .heading-1{
+    padding-bottom: 0;
+    padding-top: 0;
+    font-size: 25px;
+    line-height: 35px;
+  }
+
+}
+@media(max-width: 770px){
+  .nav{
+    display: none;
+  }
+  .burger{
+    display: block;
+  }
 }
