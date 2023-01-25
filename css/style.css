@@ -10,7 +10,7 @@ img{
 .nav {
   display: flex;
   justify-content: space-between;
-  
+  flex-grow: 1;
   
 }
 .nav-link {
@@ -83,10 +83,27 @@ img{
   padding-bottom: 8px;
 }
 .burger{
+  position: relative;
   display: none;
   width: 40px;
   height: 5px;
   background: #000000;
+}
+.burger::after, .burger::before{
+  display: none;
+  width: 40px;
+  height: 5px;
+  background: #000000;
+  position: absolute;
+  left: 0;
+  content: "";
+}
+
+.burger::after{
+  top: 10px;
+}
+.burger::before{
+  top: -10px;
 }
 .container{
     width: 80%;
@@ -110,7 +127,14 @@ img{
   .nav{
     display: none;
   }
-  .burger{
+  .burger, .burger::before, .burger::after{
     display: block;
+    cursor: pointer;
+  }
+  .navbar{
+    height: 60px;
+  }
+  .lang{
+    font-size: 12px;
   }
 }
